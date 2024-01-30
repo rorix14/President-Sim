@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+ background-image: url("background.png");
+}
+
+#title{
+	font-size: 50px;
+	margin-top: 70px;
+}
+
+#wrap{
+	margin-top: 50px;
+	margin-left: 250px;
+	margin-right: 250px;
+	height: 350px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db9130;
+    border-radius: 10px;
+}
+
+.single {
+	margin-top: 50px;
+	margin-left: 350px;
+	margin-right: 350px;
+	height: 350px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db9130;
+    border-radius: 10px;
+  	background-color: gold;
+}
+
+
+.left{
+  border-radius: 10px;
+  background-color:	gold;
+  text-align: center;
+  padding: 20px;
+  width: 320px;	
+  margin: 10px;
+  font-size: 18px;
+  float:left;
+ }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #f4511e;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #dd4413;
+}
+
+.right {
+  border-radius: 10px;
+  background-color: burlywood;
+  padding: 20px;
+  margin: 10px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

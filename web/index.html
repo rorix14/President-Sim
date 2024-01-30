@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <script type="text/javascript" src="jQuery.js"></script>
+    <title>President Sim</title>
+    <link rel="stylesheet" type="text/css" href="index_style.css">
+</head>
+<body>
+	<h1 id="title" align="center">President Sim</h1>
+	<div id="wrap">
+		<div class="left">
+			President Sim is a political card game where you will play as a newly elected president and make hard choices about your peoples future!
+			<form action="/register" method="get">
+				<button class="button" style="font-size: 28px"><span>Register here!</span>
+			</form>
+		</div>
+		<div class="right">
+			<form action="/login" method="post">
+		    	<div>
+		    		<label for="name">Username:</label>
+		    		<input type="text" name="username" id="name"/>
+		    	</div>
+		    	<div>
+		    		<label for="name">Password:</label>
+		    		<input type="password" name="password" id="pass"/>
+		    	</div>
+		    	<div>
+		    		<input type="submit" value="Submit" />
+		    	</div>
+		    </form>
+		</div>
+	</div>
+</body>
+</html>

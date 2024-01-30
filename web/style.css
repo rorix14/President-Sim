@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+* {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+/* LOGIN AND REGISTER */
+
+.form {
+    border-radius: 15px;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    box-shadow: 6px 3px 5px 0px rgba(0, 0, 0, 0.63);
+    height: 350px;
+    width: 800px;
+    margin: auto;
+}
+
+.form h1 {
+    /* font-family: 'Antic Didone', serif; */
+    font-size: 30px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.form__item {
+    display: inline;
+    text-align: center;
+}
+
+.btn {
+    background: linear-gradient(to right, #f12711, #f5af19);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 31px;
+    border: 1px solid;
+    display: inline-block;
+    cursor: pointer;
+    color: #6b7643;
+    /* font-family: Arial; */
+    font-size: 12px;
+    padding: 8px 30px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.btn:hover {
+    background-color: #76436b;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* ELEMENTS FROM THE GAME */
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: inherit;
+    /* Set up positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+        /* 50% */
+    }
+}
+
+/* .Mood {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 128px;
+    height: 68px;
+    position: relative;
+    right: 32%;
+} */
+
+.cards {
+    /* width: 170px; */
+    cursor: grab;
+    animation: hover 0.3s ease-out forwards;
+    margin: 10PX;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 128px;
+    font-size: 20px;
+    text-align: center;
+    color: #cfc7c7;
+}
+
+.playedCards {
+    /* width: 170px; */
+    border: 4px solid rgb(203, 10, 10);
+    cursor: not-allowed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 128px;
+    font-size: 20px;
+    color: #cfc7c7;
+}
+
+.highlightCards {
+    border: 5px solid rgb(224, 248, 11);
+}
+
+#showHand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* novo */
+    position: relative;
+    left: 17vh;
+}
+
+.TTBar {
+    background: #262626;
+    padding: 5px;
+    box-sizing: border-box;
+    /* border: 1px solid #0fffb7; */
+    border-radius: 2px;
+    margin: auto;
+}
+
+.TTBar_level {
+    background: linear-gradient(to right, #0f57ff, #0fffb7);
+    /* background: #0fffb7; */
+    width: 100%;
+    height: 20px;
+}
+
+/* #endTurn2 {
+    cursor: pointer;
+    height: 76px;
+    border-radius: 50%;
+} */
+
+#endTurn2 {
+    /* background-image: url('./endTurnButton.png'); */
+    background-image: url('end turn button.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    background-position-y: center;
+    height: 96px;
+    width: 96px;
+    /* height: 12vh; */
+    /* width: 100%; */
+    /* border-radius: 50%; */
+}
+
+#endTurn2:active {
+    /* background-image: url('./button.png'); */
+    opacity: 0.7;
+}
+
+/* #selectedRegion {
+    position: absolute;
+    left: 10px;
+} */
+
+.globe {
+    background-image: url('globe.png');
+    height: 96px;
+    width: 96px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+}
+
+.globe:active {
+    opacity: 0.7;
+}
+
+#totalHappiness {
+    position: absolute;
+    left: 7%;
+}
+
+#totalProduction {
+    position: absolute;
+    left: 7%;
+    padding-top: 5%;
+}
+
+#divTurn {
+    position: absolute;
+    right: 10px;
+    float: left;
+    /* bottom: 273px; */
+}
+
+#month {
+    position: absolute;
+    /* padding: 5px; */
+}
+
+#budget {
+    font-size: 20px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #fa5c21, #fff41f);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    /* novo */
+    right: -7vh;
+    position: relative;
+    bottom: -2vh;
+}
+
+/* CSS GRID */
+
+.Grid {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 16% auto 17%;
+}
+
+.Region {
+    background: rgba(10, 18, 128, 1);
+    border-radius: 0px;
+    position: relative;
+}
+
+.Region:hover {
+    /* background: rgba(10, 18, 128, 0.5); */
+    border: 4px dashed rgb(143, 40, 40);
+}
+
+.Region div {
+    display: block;
+    text-align: center;
+}
+
+.Region button {
+    display: block;
+    text-align: center;
+    margin: auto;
+    height: 100px;
+}
+
+.R1 {
+    background-image: url('./ilha1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 5vh;
+}
+
+.R2 {
+    background-image: url('./ilha2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-size: 340px 195px; */
+    background-position-y: 30vh;
+    background-position-x: center;
+}
+
+.R3 {
+    background-image: url('./ilha3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-size: 200px 260px; */
+    background-position-y: top;
+}
+
+.R4 {
+    background-image: url('./ilha4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+}
+
+.deckImage {
+    background-image: url('./deck pres sim.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    width: 118px;
+    height: 128px;
+    /* float: right; */
+    position: absolute;
+    right: 1px;
+    /* left: 93%; */
+}
+
+.StatsArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: gold;
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.DeckArea {
+    background: burlywood;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    height: 95%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    display: flex;
+    position: relative;
+}
+
+@keyframes hover {
+    60% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* modal */
+
+.model-conteiner {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* z-index: 2000; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-conteiner.show {
+    display: flex;
+}
+
+.model {
+    background: white;
+    width: 50%;
+    min-width: 15%;
+    padding: 15px;
+    border: 10px solid #988b7a;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    font-size: 15px;
+    /* width: 10px;
+height: 10px; */
+}
+
+.show .model {
+    animation: modal .4s;
+}
+
+.outOfBuget {
+    color: #f12711;
+}
+
+.show .model#outOfBuget {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0)
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(5px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-7px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(7px, 0, 0);
+    }
+}
+
+/* toolTip */
+
+/* .test {
+   position: relative;
+   cursor: pointer; 
+} */
+
+.tooltipContainer .toolTip {
+    position: absolute;
+    /* z-index: 1; */
+    left: -10%;
+    bottom: 100%;
+    /* margin-left: -107px; */
+    opacity: 0;
+    /* transition: opacity 1s; */
+    /* visibility: hidden; */
+    display: none;
+    width: 125px;
+    background-color: tomato;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 7px;
+    padding: 6px 0;
+}
+
+.tooltipContainer .toolTip::after {
+    content: '';
+    top: 100%;
+    left: 50%;
+    position: absolute;
+    border-style: solid;
+    border-color: tomato transparent transparent transparent;
+    margin-left: -5px;
+    border-width: 5px;
+}
+
+.tooltipContainer:hover .toolTip {
+    /* visibility: visible; */
+    display: flex;
+    opacity: 1;
+    animation: fadeIn .4s;
+}
+
+/* Region mood */
+
+.Region .regionMood {
+    display: none;
+    /* background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    height: 96px;
+    width: 96px; */
+    position: absolute;
+    /* bottom: 0px; */
+    bottom: 0px;
+    left: 0px;
+}
+
+.Region .right {
+    left: auto;
+    right: 0px;
+}
+
+.Region:hover .regionMood {
+    display: flex;
+    animation: fadeIn .5s;
+}
+
+.Region .regionMood .image {
+    position: relative;
+    bottom: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    height: 72px;
+    width: 140px;
+}
+
+.Region .regionMood .corVeryAngry, .Region .regionMood .corAngry, .Region .regionMood .corAnoyed, .Region .regionMood .corNormal, .Region .regionMood .corHappy, .Region .regionMood .corVeryHappy {
+    width: 64px;
+    height: 64px;
+}
+
+.Region .regionMood .arrow {
+    height: 32px;
+    width: 32px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.coin {
+    background-image: url('coin.png');
+    height: 48px;
+    width: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.eventConteiner {
+    position: absolute;
+    /* bottom: 0px; */
+    bottom: 0px;
+    left: 0px;
+}
+
+.eventButton {
+    background-image: url('noEvent.png');
+    height: 65px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: not-allowed;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.eventButton.eventActive {
+    background-image: url('eventButton.png');
+    cursor: pointer;
+    animation: hover 0.3s ease-out forwards;
+}
+
+/* deck cards */
+
+.cardImage {
+    background-image: url('card pres sim.png');
+}
+
+.A {
+    background-image: url('card A.png');
+}
+
+.B {
+    background-image: url('card B.png');
+}
+
+.C {
+    background-image: url('card C.png');
+}
+
+.D {
+    background-image: url('card D.png');
+}
+
+.E {
+    background-image: url('card E.png');
+}
+
+.F {
+    background-image: url('card F.png');
+}
+
+.G {
+    background-image: url('card G.png');
+}
+
+.H {
+    background-image: url('card H.png');
+}
+
+/* population images */
+
+.popVeryAngry {
+    background-image: url('pop very angry.png');
+}
+
+.popAngry {
+    background-image: url('pop angry.png');
+}
+
+.popAnoyed {
+    background-image: url('pop anoyed.png');
+}
+
+.popNormal {
+    background-image: url('pop normal.png');
+}
+
+.popHappy {
+    background-image: url('pop happy.png');
+}
+
+.popVeryHappy {
+    background-image: url('pop very happy.png');
+}
+
+/* corpurat Images */
+
+.corVeryAngry {
+    background-image: url('cor very angry.png');
+}
+
+.corAngry {
+    background-image: url('cor angry.png');
+}
+
+.corAnoyed {
+    background-image: url('cor anoyed.png');
+}
+
+.corNormal {
+    background-image: url('cor normal.png');
+}
+
+.corHappy {
+    background-image: url('cor happy.png');
+}
+
+.corVeryHappy {
+    background-image: url('cor very happy.png');
+}
+
+.greenArrow {
+    background-image: url('arrow green.png');
+}
+
+.redArrow {
+    background-image: url('arrow red.png');
+}
+
+/* OLD STUFF
+/* @import url('https://fonts.googleapis.com/css?family=Antic+Didone');
+* {
+    font-family: 'Antic Didone', serif;
+} */
+
+/* .block {
+    display: block;
+    width: 100%;
+    border: dashed;
+    background-color: #4CAF50;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.block:hover {
+    background-color: #ddd;
+    color: black;
+}  */
